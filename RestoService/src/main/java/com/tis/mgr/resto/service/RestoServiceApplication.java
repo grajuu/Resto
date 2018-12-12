@@ -5,11 +5,16 @@ import java.util.stream.Stream;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.context.annotation.Bean;
 
 import com.tis.mgr.resto.service.entity.Reservation;
 import com.tis.mgr.resto.service.repo.ReservationRepo;
 
+
+@RefreshScope
+@EnableDiscoveryClient
 @SpringBootApplication
 public class RestoServiceApplication {
    
